@@ -1,0 +1,23 @@
+<!doctype html>
+<title>Sample Flask App to Test Model</title>
+
+<h2>Select a file to upload</h2>
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Submit">
+	</p>
+</form>
+<hr/>
+
+{% if coin_type %}
+    <div>
+        <p>The image is a picture of a {{ coin_type }} coin </p>
+        <img src="{{ url_for('display_image', filename=filename) }}">
+    </div>
+{% endif %}
+
