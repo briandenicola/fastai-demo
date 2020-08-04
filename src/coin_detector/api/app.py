@@ -29,7 +29,9 @@ def upload_image():
 		file.save(filepath)
 		pred,pred_idx,prob = learner_inference.predict(filepath)
 		
-		return render_template('upload.html', coin_type=pred, filename=filename)
+		confident_level = f'{prob[pred_idx]:.04f}'
+
+		return render_template('upload.html', coin_type=pred, filename=filename, confident_level=(confident_level))
 	else:
 		return redirect(request.url)
 

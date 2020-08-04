@@ -9,7 +9,7 @@ args = parser.parse_args()
 
 key = args.key
 
-coin_types = 'quarters','nickels','dimes', 'roman'
+coin_types = 'marcus+aurelius','aurelian', 'hadrian', 'trajan', 'antonius+pius', 'constantine', 'justinian', 'julius+caesar'
 path = Path('coins')
 
 if not path.exists():
@@ -17,7 +17,7 @@ if not path.exists():
     for o in coin_types:
         dest = (path/o)
         dest.mkdir(exist_ok=True)
-        results = search_images_bing(key, f'{o} coin')
+        results = search_images_bing(key, f'Roman Emperor {o} coins')
         download_images(dest, urls=results.attrgot('content_url'))
 
 coins = DataBlock(
