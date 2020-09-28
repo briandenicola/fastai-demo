@@ -1,6 +1,6 @@
 # Overview 
 
-A repo for me to learn AI/ML using the fastai toolkit. 
+A Roman Imperial Coin (RIC) classifier model based on fasti.ai
 
 # Prerequisite
 * Azure Bing Search 
@@ -24,3 +24,9 @@ A repo for me to learn AI/ML using the fastai toolkit.
 
 # Example
 ![roman](./assets/screenshot.png)
+
+# Roadmap 
+- [x] A naiive implementation using Chapter 2 from fast.ai's book
+- [x] A python web/api to host model 
+- [ ] Web crawl for data set of various roman coins
+- [ ] Refine model to detect various types of Roman Emperors and possibly coin type 
